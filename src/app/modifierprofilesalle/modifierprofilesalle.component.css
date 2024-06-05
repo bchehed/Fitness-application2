@@ -1,0 +1,6 @@
+.update-profilsalle-form input[type="text"],
+.update-profilsalle-form input[type="email"],
+.update-profilsalle-form input[type="number"],
+.update-profilsalle-form input[type="password"] {
+  width: 450px; /* ou toute autre taille souhaitée */
+}

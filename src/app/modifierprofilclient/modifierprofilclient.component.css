@@ -1,0 +1,6 @@
+.update-profilclient-form input[type="text"],
+.update-profilclient-form input[type="email"],
+.update-profilclient-form input[type="number"],
+.update-profilclient-form input[type="password"] {
+  width: 450px; /* ou toute autre taille souhaitée */
+}

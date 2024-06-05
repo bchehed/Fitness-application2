@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Ayurveda - Responsive HTML Template</title>
+
+</head>
+
+<body>
+    <!-- pre loader start -->
+    <div class="pa-preloader">
+        <div class="pa-ellipsis">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- pre loader end -->
+    <!-- main wrapper start -->
+    <div class="pa-main-wrapper">
+        <!-- top header start -->
+      <app-header></app-header>
+        <!-- top header end -->
+        <!-- main header start -->
+       
+        <!-- main header end -->
+        <!-- breadcrumb start -->
+        <div class="pa-breadcrumb">
+            <div class="container-fluid">
+                <div class="pa-breadcrumb-box">
+                    <h1>Mes Packs</h1>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li>Mes Packs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+        <div class="pa-product">
+         
+            <div class="container">
+               
+                <div class="row" >
+                   
+                    <div class="col-lg-4 col-sm-6" *ngFor="let pack of listPack ">
+                        <div class="pa-product-box">
+                            <div class="pa-product-img">
+                                <img src= {{pack.image}} alt="image" class="img-fluid" style="width: 300px;height: 220px;" />
+                            </div>
+                            <div class="pa-product-content">
+                                <h4>{{pack.nom}}</h4>
+                               
+                                <p class="pa-product-rating">
+                                  
+                                </p>
+                               <div><a href="#" class="pa-prod-category"><span>Catégorie:</span> {{pack.categorie.nom}}</a></div>
+                                <p>{{pack.prix}}dt</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button (click)="DeletePack(pack)" type="submit" class="btn btn-danger btn-sm">
+                                      Supprimer
+                                    </button>
+                                    
+                                    
+                                  </div>
+                            </div>
+                            
+                        </div>  
+                                     
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+       
+       <app-footer></app-footer>
+       
+    </div>
+  
+</body>
+</html>

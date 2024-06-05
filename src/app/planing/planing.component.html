@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 08:53:06 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fitness</title>
+    </head>
+<body>
+
+<app-header></app-header>
+ <!-- breadcrumb start -->
+ <div class="pa-breadcrumb ">
+    <div class="container-fluid">
+        <div class="pa-breadcrumb-box">
+            <h1>Planing</h1>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                <li>Ajouter Planing</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- breadcrumb end -->
+    
+<div class="pa-contact spacer-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="pa-contact-map">
+                   <img src="assets/images/p4.jpg" width="660px" height="650px">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="pa-contact-form">
+                    <h1 class="pa-login-title">Ajouter Planing</h1>
+                    <form (ngSubmit)="addNewplaning()" [formGroup]="AjouterForm">
+                        <input  type="text" class="form-control"  id="nom" placeholder="nom" formControlName="nom">
+                        <input type="text" class="form-control" id="duree" placeholder="duréé" formControlName="duree">
+                        <input  type="text" class="form-control" id="date" placeholder="disponibilité" formControlName="date">
+                        <input type="text" class="form-control" id="prix" placeholder="prix" formControlName="prix">
+                        <input type="text" class="form-control"  id="emplacement" placeholder="Emplacement" formControlName="emplacement">
+
+                        <textarea  type="textarea" class="form-control"  id="description" placeholder="Déscription " name="description" id="description" class="require" formControlName="description"></textarea>
+                            <button type="submit" class="pa-btn submitForm">envoyer</button>
+                            <div class="response"></div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- footer  -->
+  <app-footer></app-footer>
+    <!-- footer end -->
+   
+
+</body>
+</html>
+

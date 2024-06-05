@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 15:40:02 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Ayurveda - Responsive HTML Template</title>
+    
+</head>
+
+<body>
+   
+    <!-- main wrapper start -->
+ <app-header></app-header>
+        <!-- top header end -->
+       
+        <!-- breadcrumb start -->
+        <div class="pa-breadcrumb">
+            <div class="container-fluid">
+                <div class="pa-breadcrumb-box">
+                    <h1>Contactez-nous</h1>
+                    <ul>
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li>Contactez-nous</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+        <!-- contact start -->
+        <div class="pa-contact spacer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="pa-contact-map">
+                           <img src="assets/images/cardio1.jpg" width="700px" height="650px">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="pa-contact-form">
+                            <form (ngSubmit)="addNewContact()" [formGroup]="ContactForm">
+                                <input  type="text" class="form-control" autocomplete="current-nom" id="nom" placeholder="nom" formControlName="nom">
+                                <input type="email" class="form-control" autocomplete="current-email" placeholder="email" formControlName="email">
+                                <input  type="text" class="form-control" autocomplete="current-telephone" id="telephone" placeholder="telephone" formControlName="telephone">
+                                <input type="text" class="form-control" autocomplete="current-sujet" placeholder="sujet" formControlName="sujet">
+                                <textarea  type="textarea" class="form-control" autocomplete="current-message" placeholder="Message " name="message" id="message" class="require" formControlName="message"></textarea>
+                                    <button type="submit" class="pa-btn submitForm">envoyer</button>
+                                    <div class="response"></div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact end -->
+       
+        <!-- footer start -->
+     <app-footer></app-footer>
+        <!-- footer end -->
+        
+    
+   
+
+    
+    <!-- main wrapper end -->
+    <!-- GO To Top -->
+    <a href="javascript:void(0);" class="pa-scroll-top">
+        <svg version="1.1" x="0" y="0" viewBox="0 0 512 512" xml:space="preserve" class=""><g><path d="M444.068 0H67.932C30.474 0 0 30.474 0 67.932v376.136C0 481.526 30.474 512 67.932 512h376.136C481.527 512 512 481.526 512 444.068V67.932C512 30.474 481.527 0 444.068 0zM422.72 344.123c-2.629 2.632-6.079 3.947-9.526 3.947s-6.897-1.316-9.526-3.947L256 196.461 108.333 344.123c-5.261 5.265-13.796 5.261-19.052 0-5.263-5.261-5.263-13.792 0-19.053l157.193-157.191c5.259-5.263 13.794-5.263 19.053 0L422.72 325.07c5.263 5.261 5.263 13.792 0 19.053z" fill="currentColor" data-original="#000000"/></g></svg>
+    </a>
+  
+
+
+</body>
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 15:40:02 GMT -->
+</html>

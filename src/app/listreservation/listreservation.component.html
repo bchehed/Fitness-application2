@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 08:53:06 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Ayurveda - Responsive HTML Template</title>
+   
+</head>
+
+<body>
+    
+    <!-- main wrapper start -->
+    <div class="pa-main-wrapper">
+       
+        <!-- main header start -->
+        <app-header></app-header>
+        <!-- main header end -->
+        <!-- breadcrumb start -->
+        <div class="pa-breadcrumb">
+            <div class="container-fluid">
+                <div class="pa-breadcrumb-box">
+                    <h1>Abonnements</h1>
+                    <ul>
+                        <li><a href="index-2.html">Acceuil</a></li>
+                        <li>Clients Abonnements<li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+        <!-- cart start -->
+        <div class="pa-product">
+            <div class="container">
+                <div class="pa-heading">
+                    <img src="assets/images/darkpfe.png" alt="image" class="img-fluid" width="140" height="140" />
+                    <h1>Vos réservations packs</h1>
+                    <h5>Fitness</h5>
+                </div>
+        
+        <div class="pa-cart spacer-top spacer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="pa-cart-box">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                       
+                                        <th>Nom</th>
+                                        <th>Prix</th>
+                                        <th>Payer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let reservation of listReservation">
+                                        <td>
+                                            <div class="pa-cart-img">
+                                                <img [src]="reservation.pack.image" alt="image" class="img-fluid" />
+                                            </div>
+                                        </td>
+                                        
+                                        <td>{{ reservation.pack.nom }}</td>
+                                        <td>{{ reservation.pack.prix }} dt</td>
+                                        <td><a (click)="makePayment()">Payer</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div></div>
+
+        <div class="pa-product">
+            <div class="container">
+                <div class="pa-heading">
+                    <img src="assets/images/darkpfe.png" alt="image" class="img-fluid" width="140" height="140" />
+                    <h1>Vos réservations Entraîneurs</h1>
+                    <h5>Fitness</h5>
+                </div>
+        
+        <div class="pa-cart spacer-top spacer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="pa-cart-box">
+                            <table>
+                                <thead>
+                                    <tr>
+                                       <th>Entraîneur</th>
+                                       <th>Email</th>
+                                       <th>Téléphone</th>
+                                       <th>paiement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let reservationcoach of listReservationCoach">
+                                       
+                                        <td>{{ reservationcoach.coach.nom }}</td>
+                                        <td>{{ reservationcoach.coach.email }}</td>
+                                        <td>{{ reservationcoach.coach.telephone }} </td>
+                                        <td><a (click)="makePayment()">Payer</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- cart end -->
+        <!-- footer start -->
+       <app-footer></app-footer>
+        <!-- footer end -->
+       
+       
+    </div>
+    
+   
+</body>
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 08:53:06 GMT -->
+</html>

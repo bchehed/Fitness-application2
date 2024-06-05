@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 08:53:06 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fitness</title>
+    </head>
+<body>
+<app-header></app-header>
+ <!-- breadcrumb start -->
+ <div class="pa-breadcrumb ">
+    <div class="container-fluid">
+        <div class="pa-breadcrumb-box">
+            <h1>Entraîneur</h1>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                <li>connexion</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- breadcrumb end -->
+
+    
+   <div class="pa-contact-box">
+    <div class="pa-login-model">
+         <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">  
+                        <form (ngSubmit)="loginCoach()" [formGroup]="loginForm">
+                        <div class="pa-login-form">
+                         <div class="modal-body">
+                                <h1 class="pa-login-title">Se connecter</h1>
+                            <input type="email" placeholder="Email" formControlName="email">
+                            <div *ngIf="email?.touched && email?.invalid">
+                                <small class="text-danger" *ngIf="email?.errors?.['required']">l'email
+                                    est obligatoire</small>
+                                    <small class="text-danger" *ngIf="email?.errors?.['email']">respecter le format email
+                                       </small>
+                            </div>
+                            <input type="password" placeholder="Mot de passe" formControlName="mdp">
+                            <div *ngIf="mdp?.touched && mdp?.invalid">
+                                <small class="text-danger" *ngIf="mdp?.errors?. ['required']">le mot de passe 
+                                    est obligatoire</small>
+                            </div>
+                             <div class="pa-login-btn">
+                                <button type="submit" class="pa-btn">Se connecter</button> <a href="/registercoach" class="pa-right "  >S'inscrire</a>
+                            </div>
+                         </div>
+                        </div>
+                        </form>
+                 </div>
+         </div>
+    </div>  
+</div>
+    <!-- footer  -->
+ <app-footer></app-footer>
+    <!-- footer end -->
+   
+
+</body>
+</html>

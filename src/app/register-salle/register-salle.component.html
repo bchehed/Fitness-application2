@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 08:53:06 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fitness</title>
+    </head>
+<body>
+    
+<app-header></app-header>
+<!-- breadcrumb start -->
+<div class="pa-breadcrumb ">
+    <div class="container-fluid">
+        <div class="pa-breadcrumb-box">
+            <h1>Inscription Directeur Salle De Sport</h1>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                <li>Inscription </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- breadcrumb end -->
+    
+   <div class="pa-contact-box">
+    <div class="pa-login-model">
+         <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">  
+                    <form (ngSubmit)="addNewSalle()" [formGroup]="salleForm">
+                        <div class="pa-login-form">
+                         <div class="modal-body">
+                                <h1 class="pa-login-title">créer un compte</h1>
+                            <input type="text" class="form-control" id="nom"  placeholder="Nom" formControlName="nom">
+                            <div *ngIf="nom?.touched && nom?.invalid">
+                                <small class="text-danger" *ngIf="nom?.errors?.['required']">le nom
+                                    est obligatoire</small>
+                            </div>
+                            <input type="text" class="form-control"  id="adresse"  placeholder="adresse" formControlName="adresse">
+                            <div *ngIf="adresse.touched && adresse?.invalid">
+                                <small class="text-danger" *ngIf="adresse.errors?.['required']">l'adresse
+                                    est obligatoire</small>
+                                    
+                            </div>
+                       
+                            <input type="email" class="form-control" id="email"  placeholder="Email" formControlName="email">
+                            <div *ngIf="email?.touched && email?.invalid">
+                                <small class="text-danger" *ngIf="email?.errors?.['required']">l'email
+                                    est obligatoire</small>
+                                    <small class="text-danger" *ngIf="email?.errors?.['email']">respecter le format email
+                                       </small>
+                            </div>
+                            <input type="text" class="form-control" id="telephone"  placeholder="telephone" formControlName="telephone">
+                            <div *ngIf="telephone?.touched && telephone?.invalid">
+                                <small class="text-danger" *ngIf="telephone?.errors?. ['required']">le téléphone
+                                    est obligatoire</small>
+                            </div>
+                            <input type="password" class="form-control"  id="mdp"  placeholder="Mot de passe" formControlName="mdp">
+                            <div *ngIf="mdp?.touched && mdp?.invalid">
+                                <small class="text-danger" *ngIf="mdp?.errors?. ['required']">le mot de passe 
+                                    est obligatoire</small>
+                            </div>
+                           
+
+                             <div class="pa-login-btn">
+                                <button  type="submit" class="pa-btn">s'inscrire</button> <a href="loginsalle" class="pa-right " >se connecter</a>
+                            </div>
+                         </div>
+                        </div>
+                        </form>
+                 </div>
+         </div>
+    </div>  
+</div>
+    <!-- footer  -->
+<app-footer></app-footer>
+
+</body>
+</html>

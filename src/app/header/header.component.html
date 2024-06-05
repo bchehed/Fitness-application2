@@ -1,0 +1,92 @@
+
+<div class="pa-main-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <div class="pa-logo">
+                    <a href=""><img src="assets/images/lightpfe.png"  width="95px"  height= "100px"alt="image" class="img-fluid" /></a>
+                </div>
+            </div>
+            <div class="col-md-9 col-6">
+                <div class="pa-nav-bar">
+                    <div class="pa-menu">
+                        <ul>
+                            <li><a href="">Accueil</a></li>
+                            <li><a href="about">Qui Sommes Nous</a></li>
+                          
+                            <li  *ngIf="IsClientIn" class="pa-menu-child"><a href="">Services</a>
+                                <ul class="pa-submenu">
+                                    <li>
+                                        <a href="/listpack">Achats</a>
+                                    </li>
+                                    <li>
+                                        <a href="listplaningclient">Plans d'entraînement</a>
+                                    </li>
+                                    </ul>
+                                    </li>
+                           <li *ngIf="IsClientIn"><a href="/listreservation">Mes réservations</a></li> 
+                           <li *ngIf="IsClientIn"><a href="/profileclient"> Mon Profile</a></li>     
+                            
+                            <li  *ngIf="IsCoachIn" class="pa-menu-child">Planing
+                                <ul class="pa-submenu">
+                                    <li>
+                                        <a href="/planing">Ajouter planing</a>
+                                    </li>
+                                    <li>
+                                        <a href="mesplaning">Mes Planing</a>
+                                    </li>
+                                    </ul>
+                                    </li>
+                                   
+                           
+                            <li *ngIf="IsCoachIn"><a href="/profilecoach">Mon profile</a></li>
+                            <li   *ngIf="IsSalleIn" class="pa-menu-child">Packs
+                                <ul class="pa-submenu">
+                                    <li>
+                                        <a href="/ajouterpack">Ajouter pack</a>
+                                    </li>
+                                    <li>
+                                        <a href="/mespacks">Mes Packs</a>
+                                    </li>
+                                    </ul>
+                                    </li>
+                            
+                             
+                             <li   *ngIf="IsSalleIn" ><a href="/profilesalle">Mon profile</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            <a href="Javascript:;" class="lien-connexion" (click)="IsClientIn || IsCoachIn || IsSalleIn ? afficherAlerteDeconnexion() : afficherAlerteConnexion()">
+                                {{ IsClientIn || IsCoachIn || IsSalleIn ? 'Déconnexion' : 'Se connecter' }}
+                            </a>
+                            <ul class="pa-submenu">
+                                <li *ngIf="!IsClientIn">
+                                    <a [routerLink]="['/loginclient']">Connexion Client</a>
+                                </li>
+                                <li *ngIf="IsClientIn">
+                                    <a (click)="logout()">Déconnexion</a>
+                                </li>
+                                <li *ngIf="!IsCoachIn">
+                                    <a [routerLink]="['/logincoach']">Connexion Coach</a>
+                                </li>
+                                <li *ngIf="IsCoachIn">
+                                    <a (click)="logout()">Déconnexion</a>
+                                </li>
+                                <li *ngIf="!IsSalleIn">
+                                    <a [routerLink]="['/loginsalle']">Connexion Salle</a>
+                                </li>
+                                <li *ngIf="IsSalleIn">
+                                    <a (click)="logout()">Déconnexion</a>
+                                </li>
+                            </ul>
+                            
+                                   
+                            
+                        </ul>
+
+                       
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

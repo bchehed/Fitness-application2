@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 15:39:58 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+
+</head>
+
+<body>
+    <!-- pre loader start -->
+    <div class="pa-preloader">
+        <div class="pa-ellipsis">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- pre loader end -->
+    <!-- main wrapper start -->
+    <div class="pa-main-wrapper">
+        <!-- top header start -->
+       <app-header></app-header>
+        <!-- top header end -->
+      
+        <!-- breadcrumb start -->
+        <div class="pa-breadcrumb">
+            <div class="container-fluid">
+                <div class="pa-breadcrumb-box">
+                    <h1>Services</h1>
+                    <ul>
+                        <li><a href="">Accueil</a></li>
+                        <li>Packs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+        
+        <div class="pa-product">
+            <div class="container">
+                <div class="pa-heading">
+                    <img src="assets/images/darkpfe.png" alt="image" class="img-fluid" width="140" height="140" />
+                    <h1>Packs</h1>
+                    <h5>Fitness</h5>
+                </div>
+                <div class="row" >
+                    <div class="col-lg-4 col-sm-6" *ngFor="let pack of listPack ">
+                        <div class="pa-product-box">
+                            <div class="pa-product-img">
+                                <img src= {{pack.image}} alt="image" class="img-fluid"style="width: 300px;height: 220px;" />
+                            </div>
+                            <div class="pa-product-content">
+                                <h4>{{pack.nom}}</h4>
+                                <p>{{pack.prix}}dt</p>
+                                <button  class="pa-btn"> <a class="lien" href="/dtailpack/{{pack.id}}">En savoir pkus</a></button>
+                                
+                            </div>
+                           
+                        </div>                    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      
+        <!-- footer start -->
+       <app-footer></app-footer>
+        <!-- footer end -->
+       
+    </div>
+
+
+</body>
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 15:40:01 GMT -->
+</html>

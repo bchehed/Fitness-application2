@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/product-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 15:40:01 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Ayurveda - Responsive HTML Template</title>
+
+</head>
+
+<body>
+    <!-- pre loader start -->
+    <div class="pa-preloader">
+        <div class="pa-ellipsis">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- pre loader end -->
+    <!-- main wrapper start -->
+    <div class="pa-main-wrapper">
+        <!-- top header start -->
+      <app-header></app-header>
+        <!-- top header end -->
+        <!-- main header start -->
+       
+        <!-- main header end -->
+        <!-- breadcrumb start -->
+        <div class="pa-breadcrumb">
+            <div class="container-fluid">
+                <div class="pa-breadcrumb-box">
+                    <h1>Détails</h1>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li>Détails</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+        <!-- product single start -->
+        <div class="pa-product-single spacer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="pa-prod-thumb-img">
+                                    <img src= {{event.image}} alt="image" class="img-fluid" />
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="pa-prod-content">
+                                    <h2 class="pa-prod-title">{{event.nom}}</h2>
+                                    <p class="pa-prod-price"><span>prix :</span> {{event.prix}}dt <span class="pa-offer-price"></span></p>
+                                    <a href="#" class="pa-prod-category"><span>Catégorie :</span> {{event.categorie.nom}}</a>
+                                   
+                                    <p > {{event.description}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="pa-prod-content">
+                                 
+                                 <div class="pa-prod-count">
+                                       
+                                        <button (click)="reserver(event)" class="pa-btn">reserver</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product start -->
+                        
+                        <!-- product end -->
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+        <!-- product single end -->
+        <!-- footer start -->
+       <app-footer></app-footer>
+        <!-- footer end -->
+       
+    </div>
+    <!-- main wrapper end -->
+    
+  
+</body>
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/product-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 15:40:01 GMT -->
+</html>    

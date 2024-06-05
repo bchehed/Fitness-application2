@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from kamleshyadav.com/html/pure-ayurveda/html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 10 Mar 2024 08:53:06 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fitness</title>
+    </head>
+<body>
+    
+<app-header></app-header>
+<div class="pa-breadcrumb">
+    <div class="container-fluid">
+        <div class="pa-breadcrumb-box">
+            <h1> Packs</h1>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li> Packs</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+   <div class="pa-contact-box">
+    <div class="pa-login-model">
+         <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">  
+                    <form (ngSubmit)="addNewAjouterPack()" [formGroup]=" AjouterPackForm">
+                        <div class="pa-login-form">
+                         <div class="modal-body">
+                                <h1 class="pa-login-title">Ajouter un pack</h1>
+                            <input type="text" class="form-control" id="nom"  placeholder="Nom" formControlName="nom">
+                            <div *ngIf="nom?.touched && nom?.invalid">
+                                <small class="text-danger" *ngIf="nom?.errors?.['required']">le nom
+                                    est obligatoire</small>
+                            </div>
+                            <input type="text" class="form-control"  id="prix"  placeholder="Prix" formControlName="prix">
+                            <div *ngIf="prix?.touched && prix?.invalid">
+                                <small class="text-danger" *ngIf="prix?.errors?.['required']">le prix
+                                    est obligatoire</small>
+                                    
+                            </div>
+                       
+                            <input type="file" placeholder="Image" class=" form-control card-input-image mb-3" (change)="onSelectFile($event)"formControlName="image">
+                            <select  class="form-control"   type="text"  class="form-control card-input mb-3"  name="id_categorie" formControlName="categorie">
+                                <option selected disabled>choisir une catégorie</option>
+                                <option *ngFor="let categorie of listcategorie " [value]="categorie.id">
+                                 {{categorie.nom}}
+                              </option> 
+                            </select>
+
+                            <input type="textarea" placeholder="Déscription"  class=" form-control card-input mb-3" formControlName="description">
+
+                             <div class="pa-login-btn">
+                                <button  type="submit" class="pa-btn">Ajouter</button> 
+                            </div>
+                         </div>
+                        </div>
+                        </form>
+                 </div>
+         </div>
+    </div>  
+</div>
+    <!-- footer  -->
+<app-footer></app-footer>
+
+</body>
+</html>

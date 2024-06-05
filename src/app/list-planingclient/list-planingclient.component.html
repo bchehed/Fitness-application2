@@ -1,0 +1,91 @@
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services</title>
+
+</head>
+
+<body>
+   
+    <!-- pre loader end -->
+    <!-- main wrapper start -->
+    <div class="pa-main-wrapper">
+        <!-- top header start -->
+       <app-header></app-header>
+        <!-- top header end -->
+      
+        <!-- breadcrumb start -->
+        <div class="pa-breadcrumb">
+            <div class="container-fluid">
+                <div class="pa-breadcrumb-box">
+                    <h1>Services</h1>
+                    <ul>
+                        <li><a href="">Accueil</a></li>
+                        <li>planing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+    
+ <div class="pa-product">
+    <div class="container">
+        <div class="pa-heading">
+            <img src="assets/images/darkpfe.png" alt="image" class="img-fluid" width="140" height="140" />
+            <h1>Planing</h1>
+            <h5>Fitness</h5>
+        </div>
+        <div class="pa-cart spacer-top spacer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="pa-cart-box">
+                            
+                            <table  >
+                                
+                                <thead>
+                                    <tr>
+                                        
+                                        <th>plan d'entraînement</th>
+                                        <th>emplacement</th>
+                                        <th>Déscription</th>
+
+                                        <th>duréé</th>
+                                        <th>disponibilité</th>
+                                        <th>Prix </th>
+                                        <th>Réserver Entraîneur</th>
+                                       
+                                      
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let planing of listPlaning">
+                                        
+                                        
+                                        <td> {{planing.nom}} </td>
+                                        <td> {{planing.emplacement}} </td>
+                                        <td>{{planing.description}}</td>
+                                        <td> {{planing.duree}} </td>
+                                        <td> {{planing.date}} </td>
+                                        <td>{{planing.prix}}dt</td>
+
+                                        <td><a  href="/detailcoach/{{planing.id}}"><svg class="icone-personnalisee" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/></svg>{{planing.coach.nom}}</a>
+                                    </td>
+                                   </tr>
+                                  
+                                </tbody>
+                           
+                            </table>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer start -->
+<app-footer></app-footer>
+<!-- footer end -->
